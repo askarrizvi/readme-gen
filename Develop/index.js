@@ -36,7 +36,7 @@ const questions = [
     {
         type: 'input',
         name: 'install',
-        message: 'What are the instructions for installation? (Required)',
+        message: 'What are the instructions for installation? (Separate each step with a comma)',
         validate: (installInput) => {
             if (installInput) {
                 return true;
@@ -144,6 +144,7 @@ function init() {
     inquirer.prompt(questions)
         .then(answers => {
             writeToFile("README", generateReadme(answers));
+            console.log("Readme generated!");
         })
 
 }

@@ -64,6 +64,18 @@ function renderLicenseSection(license) {
   return licsec;
 }
 
+//Function to return a string with the installation steps
+function installSteps(install){
+  var steps = install.split(',');
+  var stepsStr = "";
+  var stepNum;
+  for (let i= 0; i<steps.length; i++){
+    stepNum = i+1;
+    stepsStr += stepNum+": "+ steps[i]+"<br />";
+  }
+  return stepsStr;
+}
+
 // Function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
@@ -83,7 +95,7 @@ function generateMarkdown(data) {
 * [Questions](#questions)
 
 ## Installation
-${data.install}
+${installSteps(data.install)}
 
 ## Usage
 ${data.usage}
@@ -96,21 +108,17 @@ ${data.test}
 
 ## Credits
 
-Readme guide: https://github.com/coding-boot-camp/potential-enigma/blob/main/readme-guide.md
-
-ChooseALicense: https://choosealicense.com/
-
+Readme guide: https://github.com/coding-boot-camp/potential-enigma/blob/main/readme-guide.md <br />
+ChooseALicense: https://choosealicense.com/<br />
 Markdown License Badges: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 
 ## License
-${renderLicenseLink(data.license)}
-
+${renderLicenseLink(data.license)} <br />
 ${renderLicenseSection(data.license)}
 
 ## Questions
-https://github.com/${data.gituser}
-
-If you have any further questions, you can reach me at:
+https://github.com/${data.gituser} <br />
+If you have any further questions, you can reach me at: <br />
 ${data.email}
 `;
 }
