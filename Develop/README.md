@@ -4,8 +4,6 @@
   ## Description
   The challenge for this week involves a readme generator used to generate a high quality readme based on the user input. The “Inquirer” module for node is used to invoke specific question that the user must answer. Based on those answers, a readme will be generated. The user must provide the title of their project, a description of their project, the instructions required to install the project, the usage information, the contribution guidelines, the test instructions, the open source license, the user’s Github username, and the user’s email address.
 
-  In fact, this readme file has been generated with the readme generator(with an additional screenshot inserted).
-
   ## Table of Contents
 
 * [Installation](#installation)
@@ -21,7 +19,6 @@
 
 ## Usage
 This generator can be used to generate a high quality Readme file with a table of contents.
-![picture](screenshots/screenshot.png)
 
 ## Contributing
 The guidelines are based on the contributor covenant, you can find the covenant here: https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.txt
